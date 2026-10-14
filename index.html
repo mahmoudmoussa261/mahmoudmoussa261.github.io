@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahmoud Mousa</title>
+<meta name="description" content="Mahmoud Mousa, founder of Gifteila. Marketing & AI specialist with 4 years in e-commerce.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#22303A; --muted:#66727B; --line:#E7E4DA;
+  --accent:#D4664F; --accent-soft:#F7E6E0; --sage:#8C8762;
+  --font:"Inter","IBM Plex Sans Arabic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14191D; --surface:#1B2126; --ink:#ECE9E1; --muted:#9AA4AB; --line:#2A3238;
+    --accent:#E8836C; --accent-soft:#3A2722; --sage:#B2AC88;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14191D; --surface:#1B2126; --ink:#ECE9E1; --muted:#9AA4AB; --line:#2A3238;
+  --accent:#E8836C; --accent-soft:#3A2722; --sage:#B2AC88;
+}
+html[lang="ar"]{--font:"IBM Plex Sans Arabic","Inter",system-ui,sans-serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+html[lang="ar"] .eyebrow{letter-spacing:0;font-size:15px}
+h1,h2,h3{line-height:1.2;font-weight:700;letter-spacing:-.02em}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0;line-height:1.35}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:18px}
+h3{font-size:19px;margin-bottom:8px}
+.lead{font-size:19px;color:var(--muted);max-width:640px}
+.muted{color:var(--muted)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.mono{font-weight:700;font-size:18px;text-decoration:none;letter-spacing:-.02em}
+.mono span{color:var(--accent)}
+.links{display:flex;gap:28px;font-size:15px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.lang{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:600 14px var(--font);cursor:pointer}
+.lang:hover{border-color:var(--ink)}
+
+/* hero */
+.hero{padding:104px 0 88px;border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,72px);margin-bottom:14px}
+.role{font-size:clamp(18px,2.2vw,22px);font-weight:500;margin-bottom:22px}
+.role b{color:var(--accent);font-weight:600}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.hero-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:20px}
+.hero-card img{width:96px;height:96px;border-radius:50%}
+.stat{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:14px;gap:12px}
+.stat b{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.stat span{font-size:14px;color:var(--muted);text-align:end}
+
+/* case study */
+.case-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:56px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.facts div{background:var(--surface);padding:20px}
+.facts small{display:block;font-size:13px;color:var(--muted);margin-bottom:4px}
+.facts p{font-weight:600;font-size:15px;line-height:1.4}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:72px}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:14px;background:var(--line)}
+.sub{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.sub h3{font-size:24px;margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:14px;margin-bottom:16px}
+.card p{color:var(--muted);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-top:14px}
+.content-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:72px 0 16px}
+.content-strip img{aspect-ratio:4/5;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.caption{font-size:14px;color:var(--muted)}
+.lesson{margin-top:72px;padding:36px;border-radius:20px;background:var(--accent-soft)}
+.lesson p{font-size:20px;font-weight:500;max-width:780px}
+
+/* experience */
+.timeline{display:grid;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.row .when{color:var(--muted);font-size:15px;font-weight:500}
+.row p{color:var(--muted);font-size:16px;max-width:620px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{font-size:14px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+
+/* contact */
+.contact{text-align:center}
+.contact .lead{margin:0 auto 32px}
+.contact .ctas{justify-content:center}
+footer{padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  section{padding:72px 0}
+  .hero{padding:64px 0}
+  .hero .wrap,.case-head{grid-template-columns:1fr;gap:36px}
+  .grid3,.skills{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .content-strip{grid-template-columns:repeat(3,1fr)}
+  .row{grid-template-columns:1fr;gap:6px}
+  .links{display:none}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  .facts{grid-template-columns:1fr}
+  .lesson{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="mono">Mahmoud<span>.</span></a>
+    <div class="links">
+      <a href="#gifteila">Gifteila</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Founder · Marketer · AI builder</p>
+      <h1>Mahmoud Mousa</h1>
+      <p class="role">Founder of <b>Gifteila</b> · Marketing &amp; AI Specialist</p>
+      <p class="lead">Four years in e-commerce, starting as an Amazon seller. Today I run Gifteila, my own gifting brand in Egypt, and use AI to handle product photography, content and customer follow-up with a very small team.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#gifteila">See the Gifteila case study</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <img src="assets/logo.png" alt="Gifteila logo">
+      <div class="stat"><b>4</b><span>years in e-commerce</span></div>
+      <div class="stat"><b>81</b><span>products launched at Gifteila</span></div>
+      <div class="stat"><b>4.79★</b><span>from 57 verified reviews</span></div>
+    </aside>
+  </div>
+</header>
+
+<section id="gifteila">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <p class="eyebrow">Case study</p>
+        <h2>Gifteila: a gifting brand built by one marketer and AI</h2>
+        <p class="lead">Gifteila sells ceramic mugs, espresso cups, bottles and gift bundles across Egypt. Its tagline is "Made to gift, made to stay." I built and run every part of the marketing myself, from brand and store to content, retention and email delivery.</p>
+      </div>
+      <div class="facts">
+        <div><small>My role</small><p>Founder, marketing, growth</p></div>
+        <div><small>Market</small><p>Egypt, direct to consumer</p></div>
+        <div><small>Stack</small><p>Shopify · Meta · Metricool</p></div>
+        <div><small>Website</small><p><a href="https://gifteila.com" target="_blank" rel="noopener">gifteila.com</a></p></div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <img src="assets/products/p1.jpg" alt="Super Mom mug" loading="lazy">
+      <img src="assets/products/p3.jpg" alt="Speckled floral mug" loading="lazy">
+      <img src="assets/products/p7.jpg" alt="Seaside birds mug" loading="lazy">
+      <img src="assets/products/p6.jpg" alt="Black roses bottle" loading="lazy">
+      <img src="assets/products/p4.jpg" alt="Nordic reindeer mug" loading="lazy">
+      <img src="assets/products/p5.jpg" alt="Cute dog mug" loading="lazy">
+      <img src="assets/products/p2.jpg" alt="Green Tide mug" loading="lazy">
+      <img src="assets/products/p8.jpg" alt="Sage green mug" loading="lazy">
+    </div>
+
+    <div class="sub">
+      <h3>What I built</h3>
+      <p class="caption">Six systems that run the brand day to day</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><span class="n">01</span>
+        <h3>Brand &amp; store</h3>
+        <p>I designed the identity (logo, sage and terracotta palette, warm tone of voice) and the Shopify store, then set clear rules that build trust: cash on delivery with inspection, free shipping over 800 EGP, and WhatsApp support.</p>
+        <span class="tag">Branding · Shopify</span></div>
+      <div class="card"><span class="n">02</span>
+        <h3>AI product photography</h3>
+        <p>Product visuals are made with AI image tools (ChatGPT, Gemini) instead of photoshoots, so I can list a new product the same day it arrives, in a consistent styled look.</p>
+        <span class="tag">ChatGPT · Gemini</span></div>
+      <div class="card"><span class="n">03</span>
+        <h3>Automated content system</h3>
+        <p>I built a generator that turns live product data into branded Instagram carousels. It produced 12 designs for a full monthly calendar, with 18 posts scheduled across Instagram and Facebook.</p>
+        <span class="tag">Python · Metricool</span></div>
+      <div class="card"><span class="n">04</span>
+        <h3>Abandoned-cart recovery</h3>
+        <p>I set up two automated flows (abandoned cart and abandoned checkout) with six branded emails in Egyptian Arabic. Each flow ends with a one-time 10% code for buyers who still haven't ordered.</p>
+        <span class="tag">Shopify Flow · Email</span></div>
+      <div class="card"><span class="n">05</span>
+        <h3>Email deliverability</h3>
+        <p>I found and fixed broken DNS records (DKIM, DMARC), so store emails now send from the Gifteila domain instead of a generic Shopify address. More of them land in the inbox.</p>
+        <span class="tag">DNS · DKIM · DMARC</span></div>
+      <div class="card"><span class="n">06</span>
+        <h3>Social proof</h3>
+        <p>I collect real customer reviews (4.79★ from 57) and reuse them in content and ads. I made a firm rule to use only genuine reviews and never invented ones.</p>
+        <span class="tag">Judge.me · UGC</span></div>
+    </div>
+
+    <div class="content-strip">
+      <img src="assets/work/bundles.jpg" alt="Bundles carousel" loading="lazy">
+      <img src="assets/work/reviews.jpg" alt="Reviews carousel" loading="lazy">
+      <img src="assets/work/best-sellers.jpg" alt="Best sellers carousel" loading="lazy">
+      <img src="assets/work/christmas.jpg" alt="Christmas carousel" loading="lazy">
+      <img src="assets/work/safe-delivery.jpg" alt="Safe delivery carousel" loading="lazy">
+      <img src="assets/work/faq.jpg" alt="FAQ carousel" loading="lazy">
+    </div>
+    <p class="caption">A sample of Gifteila carousels, generated from store data and written in Egyptian Arabic.</p>
+
+    <div class="lesson">
+      <p class="eyebrow">The approach</p>
+      <p>I use AI for the repetitive work: product photos, content production and follow-up emails. That leaves my time for strategy, the offer and the customer.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>From marketplace seller to brand owner</h2>
+    <div class="timeline">
+      <div class="row">
+        <div class="when">Now</div>
+        <div><h3>Founder, Gifteila</h3>
+          <p>I own the whole brand: products, store, content, paid social, CRM and customer experience.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">4 years</div>
+        <div><h3>Amazon Seller</h3>
+          <p>I sold on Amazon, which meant product research, listing optimization, pricing, PPC campaigns and managing reviews and ratings. That is where I learned what makes people buy.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Skills &amp; tools</p>
+    <h2>What I bring</h2>
+    <div class="skills">
+      <div class="card"><h3>Marketing</h3>
+        <div class="chips">
+          <span>Brand building</span><span>Content strategy</span><span>Meta Ads</span><span>Email automation</span><span>Conversion optimization</span><span>Arabic copywriting</span>
+        </div></div>
+      <div class="card"><h3>AI</h3>
+        <div class="chips">
+          <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>AI product images</span><span>Content automation</span><span>AI workflows</span>
+        </div></div>
+      <div class="card"><h3>E-commerce</h3>
+        <div class="chips">
+          <span>Amazon Seller Central</span><span>Amazon PPC</span><span>Shopify</span><span>Metricool</span><span>Judge.me</span><span>Listing optimization</span>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Let's build something people want to gift</h2>
+    <p class="lead">I'm open to brand partnerships, marketing and AI consulting, and new roles.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:ma7moudmoussaa261@gmail.com">ma7moudmoussaa261@gmail.com</a>
+      <a class="btn" href="https://wa.me/201011476606" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://instagram.com/gifteila" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn" href="https://gifteila.com" target="_blank" rel="noopener">gifteila.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Mahmoud Mousa</span>
+    <span>Founder of Gifteila · Marketing &amp; AI</span>
+  </div>
+</footer>
+
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
